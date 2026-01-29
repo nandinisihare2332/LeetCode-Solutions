@@ -1,0 +1,16 @@
+class Solution {
+public:
+    int reverse(int n) {
+        long long revNum=0;
+
+        while(n!=0){
+          int digit=n%10;
+          revNum=revNum*10+digit;
+          n/=10;
+        }
+
+        if(revNum<INT_MIN || revNum>INT_MAX) return 0;
+        return revNum;
+    }
+
+};
